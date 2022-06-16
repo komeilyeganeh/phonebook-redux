@@ -1,9 +1,20 @@
-import React from 'react';
+import React from "react";
+import { connect } from "react-redux";
 import "./App.css";
+import Form from "./from/Form";
+import ListUsers from "./ListUsers";
 
+const App = (props) => {
+  return (
+    <div className="container">
+      <Form />
+      <ListUsers items={props.persons}/>
+    </div>
+  );
+};
 
-const App = () => {
-    return <div className='container'>سلام</div>
-}
+const mapStateToProps = (state) => {
+  return { persons: state };
+};
 
-export default App;
+export default connect(mapStateToProps)(App);

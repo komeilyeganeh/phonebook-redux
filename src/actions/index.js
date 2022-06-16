@@ -5,9 +5,9 @@ export const addUser = (userInfo) => {
   };
 };
 
-export const deteleUser = (id) => {
+export const deleteUser = (phone) => {
   return {
     type: "DELETE_USER",
-    payload: id,
+    payload: phone,
   };
 };

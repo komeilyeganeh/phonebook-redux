@@ -1,20 +1,13 @@
-import { combineReducers } from "redux";
-
-const addUserReducer = (listPersons = [], action) => {
+const userReducer = (listPersons = [], action) => {
   if (action.type === "ADD_USER") {
-    return [...listPersons, action.payload];
+    const found = listPersons.find(user => user.phone === action.payload.phone);
+    if (!found) {
+      return [...listPersons, action.payload];
+    }
+  } else if (action.type === "DELETE_USER") {
+    return listPersons.filter((person) => person.phone !== action.payload);
   }
   return listPersons;
 };
 
-const deleteUserReducer = (listPersons, action) => {
-  if (action.type === "DELETE_USER") {
-    return listPersons.filter((person) => person.id !== action.payload);
-  }
-  return listPersons;
-};
-
-export default combineReducers({
-    addUser: addUserReducer,
-    deleteUser: deleteUserReducer
-});
+export default userReducer;

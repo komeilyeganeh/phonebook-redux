@@ -1,0 +1,48 @@
+.list-container {
+    width: 100%;
+    max-height: 300px;
+    margin-top: 1rem;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: .5rem;
+    overflow-y: auto;
+}
+ul li {
+    background: #f7f7f7;
+    border-radius: 18px;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .9rem;
+    margin: 1rem 0;
+    position: relative;
+    animation: show-li .4s ease-in forwards;
+}
+@keyframes show-li {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.btn-delete {
+    background-color: red;
+    border: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: -30%;
+    left: 1%;
+}
+.not-found {
+    text-align: center;
+    color: #555;
+    font-size: .9rem;
+}

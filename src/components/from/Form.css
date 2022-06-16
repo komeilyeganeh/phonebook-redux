@@ -1,0 +1,23 @@
+.form-container {
+    width: 100%;
+    background: #fff;
+    padding: .5rem;
+    border-radius: 18px;
+}
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    margin: .5rem 0;
+}
+input:not([type="submit"]) {
+    padding: .3rem .6rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+input[type="submit"] {
+    background: #555;
+    padding: .3rem 0;
+    color: #fff;
+    cursor: pointer;
+}

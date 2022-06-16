@@ -10,9 +10,15 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "samim";
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
     direction: rtl;
-    background-color: #F6FBF4;
+    background-color: #5FD068;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
